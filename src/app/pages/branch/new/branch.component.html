@@ -176,7 +176,13 @@
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
                                 </div>
                                 <div class="modal-body">
-                                     <form   class="row">
+                                     <form  [formGroup]="cityDetailForm"  class="row">
+                                        <div class="form-group col-md-12">
+                                            <label for="exampleSelect1">Nombre de la Ciudad</label>
+                                                <input  type="text" formControlName="name" class="form-control">
+                                                <span class="help-block text-danger" *ngIf=" cityDetailForm.value.name !='' && cityDetailForm.get('name').hasError('required')">Nombre de ciudad vacio</span>                              
+                                            
+                                        </div>
 
                                       
                             

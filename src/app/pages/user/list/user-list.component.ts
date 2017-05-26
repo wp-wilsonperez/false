@@ -4,6 +4,7 @@ import { ValidationService } from './../new/validation.service';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { UserService } from './dynamic-tables.service';
 import { FormGroup, FormControl, AbstractControl, FormBuilder, Validators} from '@angular/forms';
+import {config} from './../../../../config/project-config';
 
 
 @Component({
@@ -49,7 +50,7 @@ export class UserListComponent {
     borrar(id){
 
         
-      this.http.delete('http://localhost:3000/user/delete/'+this.userId+'?access_token='+this.local.token).toPromise().then(result=>{
+      this.http.delete(config.url+'user/delete/'+this.userId+'?access_token='+this.local.token).toPromise().then(result=>{
            let apiResult = result.json();
            console.log(apiResult);
            
@@ -109,7 +110,7 @@ export class UserListComponent {
             this.editForm.value.Enabled = 1;
             console.log(this.editForm.value)
             console.log(this.userId);
-            this.http.post('http://localhost:3000/user/edit/'+this.userId+"?access_token="+this.local.token,this.editForm.value).toPromise().then(result=>{
+            this.http.post(config.url+'user/edit/'+this.userId+"?access_token="+this.local.token,this.editForm.value).toPromise().then(result=>{
                 let apiResult = result.json(); 
 
                 if(apiResult.msg == "OK"){
@@ -152,7 +153,7 @@ export class UserListComponent {
 
      loadRols(){
        
-        this.http.get('http://localhost:3000/role/list?access_token='+this.local.token).toPromise().then(result=>{
+        this.http.get(config.url+'role/list?access_token='+this.local.token).toPromise().then(result=>{
                 let apiResult = result.json();
                 console.log(apiResult);
                 

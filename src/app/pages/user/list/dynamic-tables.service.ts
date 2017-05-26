@@ -1,7 +1,9 @@
 import { UserSessionService } from './../../../providers/session.service';
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
+import {config} from './../../../../config/project-config';
 import 'rxjs/add/operator/toPromise';
+
 
 @Injectable()
 export class UserService { 
@@ -12,13 +14,13 @@ export class UserService {
     }
 
     userList():Promise<any>{
-        return this.http.get('http://localhost:3000/user/list?access_token='+this.local.token).toPromise().then(result=>{
+        return this.http.get(config.url+'user/list?access_token='+this.local.token).toPromise().then(result=>{
             return result.json()
         })
 
     }
     delete(id:string):Promise<any>{
-       return this.http.delete('http://localhost:3000/user/delete/'+id+'?access_token='+this.local.token).toPromise().then(result=>{
+       return this.http.delete(config.url+'user/delete/'+id+'?access_token='+this.local.token).toPromise().then(result=>{
 
              result.json();
         })

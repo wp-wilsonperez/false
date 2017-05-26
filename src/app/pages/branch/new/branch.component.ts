@@ -21,6 +21,7 @@ export class BranchComponent {
     public accountForm:FormGroup;
     public personalForm:FormGroup;
     public cityForm:FormGroup;
+    public cityDetailForm:FormGroup;
     public details:any = {};
     public showConfirm:boolean;
     public imagen:any;
@@ -32,6 +33,7 @@ export class BranchComponent {
     public userSession:any;
     public permission:boolean = false;
     public cities: any;
+
      @ViewChild(ImageUploaderComponent)
      public  imageComponent: ImageUploaderComponent;
 
@@ -53,6 +55,10 @@ export class BranchComponent {
         this.cityForm = this.formBuilder.group({
             'idCity': ['',Validators.compose([Validators.required])],
         }); 
+        this.cityDetailForm = this.formBuilder.group({
+            'name':[''],
+            'description':['']
+        })
 
         this.userSession = this.local.getUser();
           
