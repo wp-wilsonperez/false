@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  <ckeditor
     [(ngModel)]="ckeditorContent"
     [config]="config"
@@ -6,4 +7,14 @@
     (focus)="onFocus($event)"
     (blur)="onBlur($event)"
     debounce="500">
+=======
+ <ckeditor
+    [(ngModel)]="ckeditorContent"
+    [config]="config"
+    (change)="onChange($event)"
+    (ready)="onReady($event)"
+    (focus)="onFocus($event)"
+    (blur)="onBlur($event)"
+    debounce="500">
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205
   </ckeditor>

@@ -4,7 +4,10 @@ import { ValidationService } from './../new/validation.service';
 import { Component, ViewEncapsulation } from '@angular/core';
 import { UserService } from './dynamic-tables.service';
 import { FormGroup, FormControl, AbstractControl, FormBuilder, Validators} from '@angular/forms';
+<<<<<<< HEAD
 import {config} from './../../../../config/project-config';
+=======
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205
 
 
 @Component({
@@ -50,7 +53,11 @@ export class UserListComponent {
     borrar(id){
 
         
+<<<<<<< HEAD
       this.http.delete(config.url+'user/delete/'+this.userId+'?access_token='+this.local.token).toPromise().then(result=>{
+=======
+      this.http.delete('http://localhost:3000/user/delete/'+this.userId+'?access_token='+this.local.token).toPromise().then(result=>{
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205
            let apiResult = result.json();
            console.log(apiResult);
            
@@ -110,7 +117,11 @@ export class UserListComponent {
             this.editForm.value.Enabled = 1;
             console.log(this.editForm.value)
             console.log(this.userId);
+<<<<<<< HEAD
             this.http.post(config.url+'user/edit/'+this.userId+"?access_token="+this.local.token,this.editForm.value).toPromise().then(result=>{
+=======
+            this.http.post('http://localhost:3000/user/edit/'+this.userId+"?access_token="+this.local.token,this.editForm.value).toPromise().then(result=>{
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205
                 let apiResult = result.json(); 
 
                 if(apiResult.msg == "OK"){
@@ -153,7 +164,11 @@ export class UserListComponent {
 
      loadRols(){
        
+<<<<<<< HEAD
         this.http.get(config.url+'role/list?access_token='+this.local.token).toPromise().then(result=>{
+=======
+        this.http.get('http://localhost:3000/role/list?access_token='+this.local.token).toPromise().then(result=>{
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205
                 let apiResult = result.json();
                 console.log(apiResult);
                 

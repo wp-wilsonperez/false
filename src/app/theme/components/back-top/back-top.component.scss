@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "../../styles/variables";
 
 $size: 40px;
@@ -23,3 +24,30 @@ $size: 40px;
     opacity: 0.8;
   }
 }
+=======
+@import "../../styles/variables";
+
+$size: 40px;
+
+.back-to-top {
+  position: fixed;
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+  text-decoration: none;
+  right: 40px;
+  bottom: 40px !important;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0.4;
+  color: $default-color;
+  background-color: rgba($main-color, 0.75);
+  border-radius: 50%;
+  line-height: 34px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205

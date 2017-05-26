@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "../../../theme/styles/variables";
 
 .leafletmap .card .card-block{
@@ -12,3 +13,19 @@
 .leaflet-popup-content{
     color:$main-color;
 }
+=======
+@import "../../../theme/styles/variables";
+
+.leafletmap .card .card-block{
+    padding: 0;
+}
+
+#leaflet-map {
+  width: 100%;
+  height: calc(100vh - 260px);
+}
+
+.leaflet-popup-content{
+    color:$main-color;
+}
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205

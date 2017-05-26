@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .typography{
     .card{
         padding: 6px;
@@ -21,4 +22,29 @@
     p.desc{
         font-size:13px;
     }
+=======
+.typography{
+    .card{
+        padding: 6px;
+        .card-block{
+            padding: 4px;           
+        }
+    }
+    .card-block{
+        padding: 4px;      
+    }
+    .d-inline-block{
+        margin-bottom: 8px;
+        margin-right: 10px; 
+        img{
+            margin-bottom: 4px;
+        } 
+        p{
+            margin-bottom: 0;
+        }    
+    }
+    p.desc{
+        font-size:13px;
+    }
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205
 }

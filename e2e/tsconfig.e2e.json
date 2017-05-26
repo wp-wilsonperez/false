@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
   "compilerOptions": {
     "sourceMap": true,
@@ -17,3 +18,24 @@
     ]
   }
 }
+=======
+{
+  "compilerOptions": {
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2016"
+    ],
+    "outDir": "../dist/out-tsc-e2e",
+    "module": "commonjs",
+    "target": "es6",
+    "types":[
+      "jasmine",
+      "node"
+    ]
+  }
+}
+>>>>>>> 64d67aca73e9be188c2c2b31073cc8a07ac31205
